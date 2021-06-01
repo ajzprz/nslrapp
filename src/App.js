@@ -6,13 +6,13 @@ import Home from "./pages/home";
 import './App.css';
 import Background from "./Background/background";
 import Aboutus from "./aboutus/aboutus";
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
 import App from "./realtime/realtime";
 
 
 function runapp() {
-  
+
   return (
     <>
     <Router>
@@ -35,7 +35,7 @@ function runapp() {
         <Footer/>
       </div>
     </>
-    
+
   );
 }
 
