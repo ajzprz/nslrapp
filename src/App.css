@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+  list-style-type: none;
+  font-family: 'Quicksand', sans-serif !important;
+}
 
 .home{
   margin-top: 10px;
@@ -12,16 +17,7 @@
   padding-left: 10px;
 }
 
-.App{
-  position: relative;
-  margin-top: 60px;
-  background-color: #f8f8f8;
-}
 
-.App-header{
-  height: 500px;
-
-}
 
 
 .wrapper
@@ -30,37 +26,6 @@
   margin-right: auto;
 }
 
-.webcam{
-  position: absolute;
-  /* 
-  top:100px;
-  left: 0;
-  right: 0; */
-  text-align: center;
-  z-index: 8;
-  width: 360px;
-  height: 360px;
-}
-
-
-video.webcam{
-  position: absolute;
-  left: 450px;
-  height: 360px;
-  width: 360px;
-  text-align: center;
-}
-
-
-.canvas{
-  position: absolute;
-  left: 450px;
-  text-align: center;
-  z-index: 9;
-  width: 360px;
-  height: 270px;
-  margin-top: 45px;
-}
 
 .heightinc{
   height: 350px;
@@ -91,7 +56,7 @@ video.webcam{
 .Nav-bar{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0px;
   width: 100%;
 }
@@ -112,22 +77,71 @@ video.webcam{
   text-align: center;
 }
 
-*{
-  list-style-type: none;
-  font-family: 'Odibee Sans' !important;
+
+.App{
+  margin-top: 70px;
+  background-color: #f8f8f8;
 }
 
-.main-footer{
-  padding: 20px;
+.App-header{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 300px;
+
 }
+video{
+  position: absolute;
+  height:360px;
+  width: 360px;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+canvas{
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.predictions{
+	width : 100%;
+  padding:10px;
+  margin-bottom: 30px;
+
+}
+
+textarea{
+  width:100%;
+}
+
+
+
 
 .footer{
   background-color: black;
   font-size: larger;
   color: rgba(255, 255, 255, 0.644);
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
 }
 
+.main-footer{
+  padding: 20px;
+}
 
 li a{
   color: rgba(255, 255, 255, 0.665);
@@ -135,4 +149,9 @@ li a{
 
 .main-footer ul{
   padding-left: 0;
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
 }

@@ -4,10 +4,7 @@ import Webcam from "react-webcam"; // importing react webcam to access computer 
 import * as tf from "@tensorflow/tfjs"; // importing tensorflowjs libraries
 import '../App.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row } from "react-bootstrap";
-
-
-
+import { Container, Row, Button } from "react-bootstrap";
 
 function App() {
   const webcamRef = useRef(null);
@@ -42,7 +39,7 @@ function App() {
 
                 setValue(labelMap[text]['name']);
 
-                setText((prevState)=>prevState  + " " + labelMap[text]['name'])
+                setText((prevState)=>prevState  + "   " + labelMap[text]['name'])
             }
 
         }
@@ -55,8 +52,9 @@ function App() {
     // Loop and detect hands
     setInterval(() => {
       detect(net);
-    }, 16.7);
+    }, 1000);
   };
+
 
   const detect = async (net) => {
     // Check data is available
@@ -110,15 +108,27 @@ function App() {
 
   useEffect(()=>{runCoco()},[]);
 
+  const [copySuccess, setCopySuccess] = useState('');
+  const textAreaRef = useRef(null);
 
+  function copyToClipboard(e) {
+    textAreaRef.current.select();
+    document.execCommand('copy');
+    // This is just personal preference.
+    // I prefer to not show the whole text area selected.
+    e.target.focus();
+    setCopySuccess('Predictions Copied Sucessfully!');
+  };
+
+    
         return (
             <div className="App">
                 <Container>
-                    <br />
+                   <Row>
                     <h1>Detect From WebCam in Realtime</h1>
-                    <div className="App-header">
-                        <div className="wrap">
-                            <Row >
+                    </Row>
+                    <Row>
+                    <div className="App-header">   
                                 <Webcam className="webcam"
                                         ref={webcamRef}
                                         muted={true}
@@ -127,20 +137,20 @@ function App() {
                                 <canvas className="canvas"
                                         ref={canvasRef}
                                 />
-                            </Row>
                         </div>
-                        <br />
-                        <Row>
-                            <div className="predictions">
-                                <p id='target' >{value}</p>
-                            </div>
                         </Row>
                         <Row>
                             <div className="predictions">
-                                <textarea  rows="10" cols="40" value={text} >  </textarea>
+                                <textarea ref={textAreaRef} rows="10" cols="40" value={text} placeholder="Your Signs Predictions" >  </textarea>
+                                <Row >
+                                <Button variant="outline-success" className="center" onClick={copyToClipboard}>Copy</Button> 
+                                </Row>
+                                <div className="text-center ">
+                                {copySuccess}
+                                </div>
                             </div>
                         </Row>
-                    </div>
+                   
                 </Container>
             </div>
         );

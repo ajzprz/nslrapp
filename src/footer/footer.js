@@ -10,19 +10,19 @@ const Footer = () => {
         <div className="col-md-3 col-sm-6 p-3">
         <h4>Quick Links</h4>
             <ul>
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#">Background</a></li>
-            <li> <a href="#">Our Services</a></li>
-            <li> <a href="#">Contribute</a></li>
+            <li> <a href="/home">Home</a></li>
+            <li> <a href="/background">Background</a></li>
+            <li> <a href="/services">Our Services</a></li>
+            <li> <a href="/contribute">Contribute</a></li>
             </ul>
         </div>
         <div className="col-md-3 col-sm-6 p-3">
         <h4 >Social</h4>
             <ul>
-            <li> <a href="#">Facebook</a></li>
-            <li> <a href="#">LinkedIn</a></li>           
-            <li> <a href="#">Twitter</a></li>
-            <li> <a href="#">Youtube</a></li>    
+            <li> <a href="www.facebook.com">Facebook</a></li>
+            <li> <a href="linkedin.com">LinkedIn</a></li>           
+            <li> <a href="twitter.com">Twitter</a></li>
+            <li> <a href="youtube.com">Youtube</a></li>    
                     </ul>
         </div>
         <div className="col-md-3 col-sm-6 p-3">
