@@ -15,8 +15,8 @@ function App() {
         3:{name:'ख', color:'lime'},
         4:{name:'ग', color:'blue'},
     }
-    const [value, setValue] = useState('');
-    const  [text, setText] = useState('');
+  const [value, setValue] = useState('');
+  const  [text, setText] = useState('');
 
    const drawRect = (boxes, classes, scores, threshold, imgWidth, imgHeight, ctx)=>{
         for(let i=0; i<=boxes.length; i++){
@@ -109,23 +109,38 @@ function App() {
   useEffect(()=>{runCoco()},[]);
 
   const [copySuccess, setCopySuccess] = useState('');
+  const [deleteSuccess, setDeleteSuccess] = useState('');
   const textAreaRef = useRef(null);
 
   function copyToClipboard(e) {
     textAreaRef.current.select();
     document.execCommand('copy');
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
     setCopySuccess('Predictions Copied Sucessfully!');
   };
+
+  function eraseText(e) {
+    textAreaRef.current.select();
+    document.execCommand('delete');
+    e.target.focus();
+    setDeleteSuccess('Predictions Deleted Sucessfully!');
+};
+
+  const videoConstraints = {
+    width: 360,
+    height: 360,
+    facingMode: "user"
+  };
+  
 
     
         return (
             <div className="App">
                 <Container>
                    <Row>
+                     <div className="title">
                     <h1>Detect From WebCam in Realtime</h1>
+                    </div>
                     </Row>
                     <Row>
                     <div className="App-header">   
@@ -133,6 +148,7 @@ function App() {
                                         ref={webcamRef}
                                         muted={true}
                                         imageSmoothing={false}
+                                        videoConstraints={videoConstraints}
                                 />
                                 <canvas className="canvas"
                                         ref={canvasRef}
@@ -141,13 +157,17 @@ function App() {
                         </Row>
                         <Row>
                             <div className="predictions">
-                                <textarea ref={textAreaRef} rows="10" cols="40" value={text} placeholder="Your Signs Predictions" >  </textarea>
+                              <form action="">
+                                <textarea ref={textAreaRef} rows="10" cols="40" value={text} placeholder="Your Signs Predictions" id="output" >  </textarea>
                                 <Row >
-                                <Button variant="outline-success" className="center" onClick={copyToClipboard}>Copy</Button> 
+                                <Button variant="info" className="center" onClick={copyToClipboard}>Copy</Button> 
+                                <Button variant="danger" className="center" onClick={eraseText}>Clear</Button> 
                                 </Row>
                                 <div className="text-center ">
                                 {copySuccess}
+                                {deleteSuccess}
                                 </div>
+                              </form>
                             </div>
                         </Row>
                    

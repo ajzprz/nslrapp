@@ -4,10 +4,10 @@ import NavigationBar from "./navbar/Navbar";
 import Footer from "./footer/footer";
 import Home from "./pages/home";
 import './App.css';
-import Background from "./Background/background";
-import Aboutus from "./aboutus/aboutus";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import App from "./pages/realtime";
+import Background from "./pages/background";
+import Aboutus from "./pages/aboutus";
 
 
 function runapp() {
