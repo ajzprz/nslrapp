@@ -14,6 +14,8 @@ function App() {
         2:{name:'क', color:'yellow'},
         3:{name:'ख', color:'lime'},
         4:{name:'ग', color:'blue'},
+        5:{name:' ', color:'white'},
+
     }
   const [value, setValue] = useState('');
   const  [text, setText] = useState('');
@@ -39,7 +41,7 @@ function App() {
 
                 setValue(labelMap[text]['name']);
 
-                setText((prevState)=>prevState  + "   " + labelMap[text]['name'])
+                setText((prevState)=>prevState  + "" + labelMap[text]['name'])
             }
 
         }
@@ -47,12 +49,12 @@ function App() {
   // Main function
   const runCoco = async () => {
     // 3. TODO - Load network
-    const net = await tf.loadGraphModel('https://nepalisign.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
+    const net = await tf.loadGraphModel('https://nslrsv2.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
 
     // Loop and detect hands
     setInterval(() => {
       detect(net);
-    }, 1000);
+    }, 1800);
   };
 
 
@@ -95,7 +97,7 @@ function App() {
 
       // 5. TODO - Update drawing utility
       // drawSomething(obj, ctx)
-      requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.85, videoWidth, videoHeight, ctx)});
+      requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.75, videoWidth, videoHeight, ctx)});
 
       tf.dispose(img)
       tf.dispose(resized)
