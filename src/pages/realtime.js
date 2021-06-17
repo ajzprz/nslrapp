@@ -120,9 +120,7 @@ function App() {
   };
 
   function eraseText(e) {
-    textAreaRef.current.select();
-    document.execCommand('delete');
-    e.target.focus();
+      setText((prevState)=>"")
     setDeleteSuccess('Predictions Deleted Sucessfully!');
 };
 
@@ -131,9 +129,9 @@ function App() {
     height: 360,
     facingMode: "user"
   };
-  
 
-    
+
+
         return (
             <div className="App">
                 <Container>
@@ -143,7 +141,7 @@ function App() {
                     </div>
                     </Row>
                     <Row>
-                    <div className="App-header">   
+                    <div className="App-header">
                                 <Webcam className="webcam"
                                         ref={webcamRef}
                                         muted={true}
@@ -160,8 +158,8 @@ function App() {
                               <form action="">
                                 <textarea ref={textAreaRef} rows="10" cols="40" value={text} placeholder="Your Signs Predictions" id="output" >  </textarea>
                                 <Row >
-                                <Button variant="info" className="center" onClick={copyToClipboard}>Copy</Button> 
-                                <Button variant="danger" className="center" onClick={eraseText}>Clear</Button> 
+                                <Button variant="info" className="center" onClick={copyToClipboard}>Copy</Button>
+                                <Button variant="danger" className="center" onClick={eraseText}>Clear</Button>
                                 </Row>
                                 <div className="text-center ">
                                 {copySuccess}
@@ -170,7 +168,7 @@ function App() {
                               </form>
                             </div>
                         </Row>
-                   
+
                 </Container>
             </div>
         );
