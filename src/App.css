@@ -5,6 +5,11 @@
   font-family: 'Quicksand', sans-serif !important;
 }
 
+.jumbotron{
+  margin-bottom: 0px !important;
+  padding: 20px !important;
+}
+
 .home{
   margin-top: 10px;
 }
@@ -136,7 +141,9 @@ textarea{
   margin-bottom: 10px !important;
 }
 
-
+.cust-height{
+  height:50vh;
+}
 
 
 .footer{
@@ -165,4 +172,34 @@ li a{
 .center {
   margin: auto;
   padding: 10px;
+}
+
+div[role='alert'] {
+  color: red;
+  margin-top: 1em;
+}
+.message-chars-left {
+  width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.contactdiv{
+ padding: 20px;
+ text-align: center;
+ margin: auto;
+}
+
+.contact-form input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  width: 400px;
+
+}
+
+#txtarea{
+  width: 400px;
+  height: 200px;
 }

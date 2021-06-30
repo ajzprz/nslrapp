@@ -19,10 +19,11 @@ const NavigationBar = () => {
       <Nav.Link className="px-4" href="/home">Home</Nav.Link>
       <Nav.Link className="px-4" href="/background">Background</Nav.Link>
       <Nav.Link  className="px-4" href="/aboutus">About Us</Nav.Link>
+      <Nav.Link  className="px-4" href="/contactus">Contact Us</Nav.Link>
       <NavDropdown title="Services" id="basic-nav-dropdown">
         <NavDropdown.Item href="/realtime">Detect From Webcam</NavDropdown.Item>
-        <NavDropdown.Item href="/photo">Detect From Photos</NavDropdown.Item>
-        <NavDropdown.Item href="/video">Detect From Video</NavDropdown.Item>
+        <NavDropdown.Item href="/fromimg">Detect From Photos</NavDropdown.Item>
+        <NavDropdown.Item href="/fromvid">Detect From Video</NavDropdown.Item>
         </NavDropdown>
     </Nav>
     <Form inline>

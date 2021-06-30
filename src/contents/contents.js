@@ -9,13 +9,13 @@ const Contents = () => {
         <Container>
           
 <Jumbotron className="bg-transparent">
-  <h1>We translate sign language. Automatically.</h1>
+  <h1>We translate Nepali Sign Language. Automatically.</h1>
   <p>
   NSLRS has developed technology leveraging AI and 
   computer vision that is able to recognize and translate sign language. It can be used in both business and education.
   </p>
   <p>
-    <Button variant="primary">Learn more</Button>
+    <a href="background"><Button variant="primary">Learn more</Button></a> 
   </p>
 </Jumbotron>
         </Container>

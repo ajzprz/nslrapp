@@ -8,9 +8,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import App from "./pages/realtime";
 import Background from "./pages/background";
 import Aboutus from "./pages/aboutus";
-
-
-
+import Fromimg from "./pages/fromimg";
+import Fromvid from "./pages/fromvid";
+import Contactus from "./pages/contactus";
 
 
 function runapp() {
@@ -28,6 +28,10 @@ function runapp() {
       <Route path='/realtime'exact component = {App} />
       <Route path='/background'exact component = {Background} />
       <Route path='/aboutus'exact component = {Aboutus} />
+      <Route path='/contactus'exact component = {Contactus} />
+      <Route path='/fromimg'exact component = {Fromimg} />
+      <Route path='/fromvid'exact component = {Fromvid} />
+      
     </Switch>
 
 

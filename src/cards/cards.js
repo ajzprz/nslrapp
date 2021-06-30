@@ -13,41 +13,38 @@ const Cards = () => {
         <Card className="text-center shadow">
           <Card.Img variant="top" src="1.png" />
           <Card.Body>
-            <Card.Title className="text-center" >RealTime Detection</Card.Title>
+            <Card.Title className="text-center" ><b>RealTime Detection </b></Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.
+              Use our app to detect Nepali Sign Language in Realtime using your webcam.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button variant="outline-success">Demo</Button>
+          <a href="realtime"><Button variant="outline-success">Demo</Button></a> 
 
           </Card.Footer>
         </Card>
         <Card className="text-center shadow">
           <Card.Img variant="top" src="2.png" />
           <Card.Body>
-            <Card.Title className="text-center" >Detect from Videos</Card.Title>
+            <Card.Title className="text-center" ><b>Detect from Image </b></Card.Title>
             <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.
+            Use our app to detect Nepali Sign Language from your photos.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button variant="outline-success">Demo</Button>
+          <a href="fromimg"><Button variant="outline-success">Demo</Button></a> 
           </Card.Footer>
         </Card>
         <Card className="text-center shadow">
           <Card.Img variant="top" src="3.png" />
           <Card.Body>
-            <Card.Title className="text-center" >Detect From Photos</Card.Title>
+            <Card.Title className="text-center" > <b> Detect From Video </b></Card.Title>
             <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.
+            Use our app to detect Nepali Sign Language from your videos.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button variant="outline-success">Demo</Button>
+          <a href="fromvid"><Button variant="outline-success">Demo</Button></a> 
           </Card.Footer>
         </Card>
       </CardDeck>

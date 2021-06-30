@@ -28,10 +28,10 @@ const Footer = () => {
         <div className="col-md-3 col-sm-6 p-3">
             <h4 >Contact Us</h4>
             <ul>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>loerem</li>
-                <li>lorem</li>
+                <li>9841264170</li>
+                <li>01-6634766</li>
+                <li>Thimi, Bhaktapur </li>
+                <li>Nepal</li>
             </ul>
             </div>
         </div>
