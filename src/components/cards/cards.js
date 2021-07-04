@@ -1,9 +1,6 @@
 import { Button } from 'react-bootstrap';
 import React from 'react'
 import { Card, CardDeck } from 'react-bootstrap';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-
 
 const Cards = () => {
     return (

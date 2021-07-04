@@ -1,19 +1,18 @@
 import React from "react";
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
-import NavigationBar from "./navbar/Navbar";
-import Footer from "./footer/footer";
+import NavigationBar from "./components/navbar/Navbar";
+import Footer from "./components/footer/footer";
 import Home from "./pages/home";
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import App from "./pages/realtime";
 import Background from "./pages/background";
 import Aboutus from "./pages/aboutus";
 import Fromimg from "./pages/fromimg";
 import Fromvid from "./pages/fromvid";
 import Contactus from "./pages/contactus";
+import Realtime from "./pages/realtime";
 
 
-function runapp() {
+function App() {
 
   return (
     <>
@@ -25,7 +24,7 @@ function runapp() {
     <Switch>
       <Route path='/'exact component = {Home} />
       <Route path='/home'exact component = {Home} />
-      <Route path='/realtime'exact component = {App} />
+      <Route path='/realtime'exact component = {Realtime} />
       <Route path='/background'exact component = {Background} />
       <Route path='/aboutus'exact component = {Aboutus} />
       <Route path='/contactus'exact component = {Contactus} />
@@ -44,4 +43,4 @@ function runapp() {
   );
 }
 
-export default runapp;
+export default App;

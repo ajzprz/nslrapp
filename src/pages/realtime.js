@@ -5,7 +5,7 @@ import '../App.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Button } from "react-bootstrap";
 
-function App() {
+function Realtime() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const labelMap = {
@@ -19,7 +19,7 @@ function App() {
   const [value, setValue] = useState('');
   const  [text, setText] = useState('');
 
-   const drawRect = (boxes, classes, scores, threshold, imgWidth, imgHeight, ctx)=>{
+  const createBox = (boxes, classes, scores, threshold, imgWidth, imgHeight, ctx)=>{
         for(let i=0; i<=boxes.length; i++){
             if(boxes[i] && classes[i] && scores[i]>threshold){
                 // Extract variables
@@ -55,37 +55,44 @@ function App() {
     }, 1800);
   };
   const detect = async (net) => {
-    // Check data is available
+    // Inspect if data is avaialbe
     if (
       typeof webcamRef.current !== "undefined" &&
       webcamRef.current !== null &&
       webcamRef.current.video.readyState === 4
     ) {
-      // Get Video Properties
+
+      // Obtain Video Properties
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
-      // Set video width
+
+      // Define  video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
-      // Set canvas height and width
+
+      // Define canvas height and width
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
-      // 4. TODO - Make Detections
+
+      // 4. For Making Detections
       const img = tf.browser.fromPixels(video)
       const resized = tf.image.resizeBilinear(img, [360,360])
       const casted = resized.cast('int32')
       const expanded = casted.expandDims(0)
       const obj = await net.executeAsync(expanded)
-      // console.log(await obj[2].array())
+
+      // console.log(await obj[].array()) // Validate Feteched Objects (classes, boxes or scores)
       const boxes = await obj[1].array()
       const classes = await obj[2].array()
       const scores = await obj[4].array()
-      // Draw mesh
+
+      // Draw mesh on canvas
       const ctx = canvasRef.current.getContext("2d");
-      // 5. TODO - Update drawing utility
-      // drawSomething(obj, ctx)
-      requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.75, videoWidth, videoHeight, ctx)});
+
+      // 5. Updating drawing utility
+  
+      requestAnimationFrame(()=>{createBox(boxes[0], classes[0], scores[0], 0.75, videoWidth, videoHeight, ctx)});
 
       tf.dispose(img)
       tf.dispose(resized)
@@ -96,7 +103,7 @@ function App() {
     }
   };
 
-  useEffect(()=>{runCoco()},[]);
+  useEffect(()=>{runCoco()});
 
   const [copySuccess, setCopySuccess] = useState('');
   const [deleteSuccess, setDeleteSuccess] = useState('');
@@ -139,6 +146,8 @@ function App() {
                                 <canvas className="canvas"
                                         ref={canvasRef}
                                 />
+                            
+                              
                         </div>
                         </Row>
                         <Row>
@@ -149,7 +158,7 @@ function App() {
                                 <Button variant="info" className="center" onClick={copyToClipboard}>Copy</Button>
                                 <Button variant="danger" className="center" onClick={eraseText}>Clear</Button>
                                 </Row>
-                                <div className="text-center ">
+                                <div className="text-center " value={value}>
                                 {copySuccess}
                                 {deleteSuccess}
                                 </div>
@@ -163,5 +172,5 @@ function App() {
 
 }
 
-export default App;
+export default Realtime;
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import Banner from "../banner/Banner";
-import Contents from "../contents/contents";
-import Cards from "../cards/cards";
+import Banner from "../components/banner/Banner";
+import Contents from '../components/contents/contents';
+import Cards from "../components/cards/cards";
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 
 function Home(){

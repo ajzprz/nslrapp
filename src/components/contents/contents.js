@@ -1,8 +1,7 @@
 import React from 'react'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap'
 import { Container, Jumbotron } from 'react-bootstrap'
-import '../App.css';
+import '../../App.css';
 
 const Contents = () => {
     return (

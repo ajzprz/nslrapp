@@ -1,12 +1,17 @@
 import React from 'react'
-import { Container } from "react-bootstrap";
-const Aboutus = () => {
+import { Row } from "react-bootstrap";
+import Underconstuction from '../components/underconstuction';
+
+function Aboutus (){
     return (
-        <div className="App"> 
-        <Container>
-            <h1>About Us</h1>
-            </Container>
-        </div>
+        <div>
+        <Row>
+            <div className="title">
+                <h1>About Us</h1>
+            </div>
+        </Row>
+    <Underconstuction/>
+    </div>
     )
 }
 

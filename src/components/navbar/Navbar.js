@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
@@ -9,10 +8,10 @@ import { FormControl } from 'react-bootstrap';
 
 
 
-const NavigationBar = () => {
+function NavigationBar(){
     return (
     <Navbar bg="white" expand="lg" className="shadow" >
-  <Navbar.Brand href="/">NSLRS</Navbar.Brand>
+  <Navbar.Brand href="/"><h1>NSLRS</h1></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto ml-auto">

@@ -1,9 +1,8 @@
 import React from 'react'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const Footer = () => {
+
+function Footer() {
     return (
-       <div>
     <div className="main-footer">
         <div className="container">
         <div className="row justify-content-md-center text-center ">
@@ -43,7 +42,6 @@ const Footer = () => {
         </div>
      </div>
      </div>
-    </div>
         
     )
 }
