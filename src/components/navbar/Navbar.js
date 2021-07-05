@@ -11,7 +11,7 @@ import { FormControl } from 'react-bootstrap';
 function NavigationBar(){
     return (
     <Navbar bg="white" expand="lg" className="shadow" >
-  <Navbar.Brand href="/"><h1>NSLRS</h1></Navbar.Brand>
+  <Navbar.Brand href="/"><h4>NSLRS</h4></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto ml-auto">
