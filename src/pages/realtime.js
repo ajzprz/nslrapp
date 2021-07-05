@@ -102,8 +102,8 @@ function Realtime() {
 
     }
   };
-
-  useEffect(()=>{runCoco()});
+ // eslint-disable-next-line
+  useEffect(()=>{runCoco()},[]);
 
   const [copySuccess, setCopySuccess] = useState('');
   const [deleteSuccess, setDeleteSuccess] = useState('');
