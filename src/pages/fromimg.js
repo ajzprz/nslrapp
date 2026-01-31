@@ -1,22 +1,15 @@
-import React from 'react'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {  Row } from "react-bootstrap";
-import '../App.css';
+import React from 'react';
 import Underconstuction from '../components/underconstuction';
-
 
 function Fromimg () {
     return (
-        <div>
-        <Row>
-            <div className="title">
-                <h1>Detect From Image</h1>
+        <div className="py-12 bg-base-100 min-h-screen px-4">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-4xl font-black mb-8 border-l-8 border-primary pl-6">Detect From Image</h1>
+                <Underconstuction/>
             </div>
-        </Row>
-    <Underconstuction/>
-    </div>
-       
-    )
+        </div>
+    );
 }
 
-export default Fromimg
+export default Fromimg;
