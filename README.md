@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 🇳🇵 NSLRAPP: Nepali Sign Language Recognition System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![NSLRAPP Banner](https://img.shields.io/badge/Status-Beta%20v2.0-blueviolet?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 
-## Available Scripts
+**NSLRAPP** is a state-of-the-art AI-powered platform designed to bridge the communication gap for the deaf and mute community in Nepal. By leveraging deep learning and computer vision, NSLRAPP translates Nepali Sign Language (NSL) into text in real-time, fostering inclusivity and accessibility in public and private spaces.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **⚡ Real-time Detection**: Instant translation of Nepali signs using your device's webcam with optimized low-latency inference.
+- **🌓 Dual-Theme Interface**: A premium user experience featuring **"Luxury"** (Dark Mode) and **"Winter"** (Pure White Light Mode) themes.
+- **🎯 Precise Tracking**: Smart bounding boxes with center-crop alignment to ensure accurate sign capturing.
+- **📱 Responsive Design**: Fully optimized for various screen sizes, from desktops to mobile devices.
+- **📧 Feedback System**: Integrated contact portal for users to provide feedback and suggestions to improve recognition accuracy.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: [React.js](https://reactjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [daisyUI](https://daisyui.com/) (Theming & Components)
+- **AI/ML Engine**: [TensorFlow.js](https://www.tensorflow.org/js) (GraphModel inference)
+- **Navigation**: React Router DOM v7
+- **Communication**: EmailJS for feedback integration
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📸 Preview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*(Add your screenshots here to make the README pop!)*
+- [ ] Laptop/Desktop view of the Real-time Workspace
+- [ ] Mobile view showing the responsive layout
+- [ ] Light vs Dark mode comparison
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 💻 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16.0 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ajzprz/nslrapp.git
+   cd nslrapp
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👨‍💻 Developed By
 
-### Code Splitting
+**Mr. Ajaya Prajapati**  
+*Solo Developer & AI Researcher*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I am dedicated to building intelligent systems that foster a more inclusive and accessible digital future for all communities in Nepal.
 
-### Analyzing the Bundle Size
+🔗 **Connect with me:**
+- [GitHub](https://github.com/ajzprz)
+- [LinkedIn](https://www.linkedin.com/in/ajayaprajapati/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Advanced Configuration
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+  Made with ❤️ in Nepal 🇳🇵
+</p>
